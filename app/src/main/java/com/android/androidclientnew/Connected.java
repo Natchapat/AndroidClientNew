@@ -245,7 +245,7 @@ public class Connected extends Activity {
                     String outMsg = "goto goal1"+ System.getProperty("line.separator");
                     txt = txt+outMsg;
                     textResponse.setText(txt);
-                    statusServiceLine.setText("Sending to Station1");
+                    statusServiceLine.setText("Sending to FOLA");
                     SystemClock.sleep(100);
                     out.write(outMsg);
                     out.flush();
@@ -283,7 +283,7 @@ public class Connected extends Activity {
                     String outMsg = "goto goal2"+ System.getProperty("line.separator");
                     txt = txt+outMsg;
                     textResponse.setText(txt);
-                    statusPandd.setText("Sending to Station2");
+                    statusPandd.setText("Sending to Cleaning");
                     SystemClock.sleep(100);
                     out.write(outMsg);
                     out.flush();
@@ -342,7 +342,7 @@ public class Connected extends Activity {
 
                             @Override
                             public void run() {
-                                statusServiceLine.setText("Arrived station Station1");
+                                statusServiceLine.setText("Arrived FOLA station");
                             }
                         });
                     }
@@ -352,7 +352,7 @@ public class Connected extends Activity {
 
                             @Override
                             public void run() {
-                                statusPandd.setText("Arrived station Station2");
+                                statusPandd.setText("Arrived Cleaning station");
                             }
                         });
                     }
@@ -362,7 +362,7 @@ public class Connected extends Activity {
 
                             @Override
                             public void run() {
-                                statusServiceLine.setText("Receive from Station1");
+                                statusServiceLine.setText("Receive from FOLA");
                             }
                         });
                     }
@@ -372,7 +372,7 @@ public class Connected extends Activity {
 
                             @Override
                             public void run() {
-                                statusPandd.setText("Receive from Station2");
+                                statusPandd.setText("Receive from Cleaning");
                             }
                         });
                     }
@@ -382,7 +382,7 @@ public class Connected extends Activity {
 
                             @Override
                             public void run() {
-                                statusServiceLine.setText("Error: Failed going to Station1");
+                                statusServiceLine.setText("Error: Failed going to FOLA");
                             }
                         });
                     }
@@ -392,7 +392,7 @@ public class Connected extends Activity {
 
                             @Override
                             public void run() {
-                                statusPandd.setText("Error: Failed going to Station2");
+                                statusPandd.setText("Error: Failed going to Cleaning");
                             }
                         });
                     }
